@@ -45,7 +45,7 @@ const Greet = () => {
               />
             </svg>
           </span>
-          <span className="mx-4">G2 (Garri and groundnut)</span>
+          <span className="mx-4">G² (Garri and groundnut)</span>
         </div>
         <div className="flex items-center mt-4 md:mt-6">
           <span>
