@@ -2,6 +2,7 @@
 import React from "react";
 import greet from "../../assets/greet.png";
 import TukayBtn from "../Buttons/TukayBtn";
+import { useSpring, animated } from "react-spring";
 
 const Greet = () => {
   const customStyles = {
@@ -10,8 +11,17 @@ const Greet = () => {
     marginRight: 10,
     display: { xs: "none", md: "flex" },
   };
+
+  const fadeInAnimation = useSpring({
+    opacity: 1,
+    transform: "translateY(0)",
+    from: { opacity: 0, transform: "translateY(-70px)" },
+    config: { duration: 900, tension: 280, friction: 50 },
+  });
   return (
-    <div className="md:bg-white md:text-black md:flex">
+    <animated.div
+      className="md:bg-white md:text-black md:flex"
+      style={fadeInAnimation}>
       <div className="md:w-1/2">
         <img src={greet} alt="" />
         <h1 className="bg-[#4297AB] w-[20rem] text-[28px] font-bold mx-[2rem] md:mx-[7.2rem] py-3 px-12">
@@ -85,7 +95,7 @@ const Greet = () => {
         </div>
         <TukayBtn {...customStyles}>Donate Now</TukayBtn>
       </div>
-    </div>
+    </animated.div>
   );
 };
 

@@ -5,6 +5,7 @@ import opay from "../../assets/opay.png";
 import palmpay from "../../assets/palmpay.png";
 import kuda from "../../assets/kuda.png";
 import begger from "../../assets/begger.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const customStyles = {
@@ -12,9 +13,16 @@ const Hero = () => {
     marginLeft: "4rem",
     marginRight: 10,
   };
+
+  const fadeInAnimation = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
   return (
     <div className="md:flex block pt-28 md:pt-10">
-      <div className="md:w-1/2 md:pt-28 md:px-20">
+      <motion.div
+        className="md:w-1/2 md:pt-28 md:px-20"
+        variants={fadeInAnimation}>
         <h1 className="text-[25px] md:text-[52px] px-[4rem] font-bold mb-4 md:mb-2 ">
           Na beg , we dey beg
         </h1>
@@ -29,7 +37,9 @@ const Hero = () => {
 
         <p className="px-[4rem] mt-8">Who supports us</p>
 
-        <div className="flex items-center justify-between px-[4rem] mt-4">
+        <motion.div
+          className="flex items-center justify-between px-[4rem] mt-4"
+          variants={fadeInAnimation}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="112"
@@ -71,11 +81,14 @@ const Hero = () => {
           <div>
             <img src={kuda} alt="" />
           </div>
-        </div>
-      </div>
-      <div>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}>
         <img src={begger} className="w-[90%] mx-auto" alt="" />
-      </div>
+      </motion.div>
     </div>
   );
 };
