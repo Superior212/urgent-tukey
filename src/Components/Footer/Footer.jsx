@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Logo.png";
 import { Button, Typography } from "@mui/material";
 import Socialicons from "../../assets/Socialicons.png";
 

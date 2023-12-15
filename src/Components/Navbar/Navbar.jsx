@@ -10,7 +10,7 @@ import {
   MenuList,
   Toolbar,
 } from "@mui/material";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import TukayBtn from "../Buttons/TukayBtn";
 const Navbar = () => {
