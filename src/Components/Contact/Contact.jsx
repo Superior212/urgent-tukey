@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import TukayBtn from "../Buttons/TukayBtn";
-import checkbox from "../../assets/checkbox.png";
+import checkbox from "../../assets/Checkbox.png";
 
 const Contact = () => {
   const customStyles = {
